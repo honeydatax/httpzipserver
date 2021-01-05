@@ -1,0 +1,27 @@
+' Gambas class file
+
+Public Sub _new()
+
+End
+
+Public Sub Form_Open()
+
+End
+
+Public Sub Button1_Click()
+Dim v As Integer
+Dim i As Integer
+Dim ii As Integer
+TextArea1.Text = TextArea1.Text & Chr(13) & Chr(10) & Date() 
+TextArea1.Text = TextArea1.Text & "      " & Time() & Chr(13) & Chr(10) 
+For ii = 0 To 8
+  For i = 0 To 10
+    TextArea1.Text = TextArea1.Text & Trim(Str(Int(Rnd() * 9)))
+  Next
+TextArea1.Text = TextArea1.Text & Chr(13) & Chr(10)  
+Next 
+TextArea1.Text = TextArea1.Text & Chr(13) & Chr(10) & "------------------------" & Chr(13) & Chr(10)
+End Sub
+
+Public Sub Timer1_Timer()
+End
